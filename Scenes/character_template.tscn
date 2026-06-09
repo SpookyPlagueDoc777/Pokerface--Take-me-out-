@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkol83r162auq"]
+[gd_scene format=3 uid="uid://dkol83r162auq"]
 
-[ext_resource type="Script" uid="uid://wq5ldyusi3pn" path="res://Scripts/character_template.gd" id="1_mhhh6"]
+[ext_resource type="Script" uid="uid://wq5ldyusi3pn" path="res://Scripts/Character/character_template.gd" id="1_mhhh6"]
 
 [node name="CharacterTemplate" type="CharacterBody2D"]
 script = ExtResource("1_mhhh6")
