@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
+@onready var character: AnimatedSprite2D = $AnimatedSprite2D
+
 # set amount of double jumps a character can do
 @export var double_jumps = 0
 var jumps_left = double_jumps
@@ -32,8 +34,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	if direction > 0:
-		$AnimatedSprite2D.flip_h = false
+		character.flip_h = false
 	elif direction < 0:
-		$AnimatedSprite2D.flip_h = true
+		character.flip_h = true
 
 	move_and_slide()
