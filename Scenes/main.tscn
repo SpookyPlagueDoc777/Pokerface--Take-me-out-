@@ -1,10 +1,8 @@
 [gd_scene format=4 uid="uid://vmsrfsaibwuk"]
 
 [ext_resource type="PackedScene" uid="uid://dkol83r162auq" path="res://Scenes/character_template.tscn" id="1_bo1nx"]
-[ext_resource type="Script" uid="uid://d06025mhnfu5m" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="Texture2D" uid="uid://bmu6e82u1tkde" path="res://Visuals/Placeholders/knight.png" id="2_8gbba"]
 [ext_resource type="Texture2D" uid="uid://dhlg4t7gyay4q" path="res://Visuals/Placeholders/world_tileset.png" id="3_8gbba"]
-[ext_resource type="PackedScene" uid="uid://btisly1528rn5" path="res://Scenes/pause menu.tscn" id="5_21xkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jjvhh"]
 size = Vector2(13, 19)
@@ -212,7 +210,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_jjvhh")
 
 [node name="Main" type="Node2D" unique_id=1728299770]
-script = ExtResource("1_kry3j")
 
 [node name="Placeholder" parent="." unique_id=68900832 instance=ExtResource("1_bo1nx")]
 position = Vector2(0, -10)
@@ -231,7 +228,5 @@ autoplay = "Idle"
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=325024331]
 tile_map_data = PackedByteArray("AAD6/wAAAAAAAAAAAAD7/wAAAAAAAAAAAAD8/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_kry3j")
-
-[node name="Pause_menu" parent="." unique_id=477685508 instance=ExtResource("5_21xkr")]
 
 [editable path="Placeholder"]

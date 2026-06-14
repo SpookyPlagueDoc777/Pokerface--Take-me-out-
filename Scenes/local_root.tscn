@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://oeenlep7kpfr"]
+
+[ext_resource type="PackedScene" uid="uid://btisly1528rn5" path="res://Scenes/pause menu.tscn" id="1_7ryyd"]
+[ext_resource type="Script" uid="uid://d06025mhnfu5m" path="res://Scripts/Menu/local_root_script.gd" id="1_g0bxf"]
+[ext_resource type="PackedScene" uid="uid://vmsrfsaibwuk" path="res://Scenes/main.tscn" id="2_g0bxf"]
+[ext_resource type="PackedScene" uid="uid://cvykpba3r6c5v" path="res://Scenes/menu.tscn" id="3_fkxgj"]
+
+[node name="LocalRoot" type="Node" unique_id=1131386434]
+process_mode = 3
+script = ExtResource("1_g0bxf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=508086227]
+
+[node name="Pause_menu" parent="CanvasLayer" unique_id=477685508 instance=ExtResource("1_7ryyd")]
+offset_left = 25.0
+offset_top = 23.0
+offset_right = -25.0
+offset_bottom = -25.0
+
+[node name="Menu" parent="CanvasLayer" unique_id=1559373921 instance=ExtResource("3_fkxgj")]
+visible = false
+
+[node name="Main" parent="." unique_id=1728299770 instance=ExtResource("2_g0bxf")]
+process_mode = 1

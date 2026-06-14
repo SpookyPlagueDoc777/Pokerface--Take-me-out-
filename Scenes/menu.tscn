@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cvykpba3r6c5v"]
+
+[ext_resource type="Script" uid="uid://bo7hovak02ekw" path="res://Scripts/Menu/mainmenu.gd" id="1_1rerr"]
+
+[node name="Menu" type="Control" unique_id=1559373921]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1rerr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=32508473]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.5
+offset_top = -127.0
+offset_right = 145.5
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=1355053365]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Play"
+
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=6804569]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Options"
+
+[node name="Credits" type="Button" parent="VBoxContainer" unique_id=1197437504]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Credits
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1429564463]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit
+"
+
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
