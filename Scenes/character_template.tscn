@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://wq5ldyusi3pn" path="res://Scripts/Character/character_template.gd" id="1_mhhh6"]
 
-[node name="CharacterTemplate" type="CharacterBody2D"]
+[node name="CharacterTemplate" type="CharacterBody2D" unique_id=604139198]
 script = ExtResource("1_mhhh6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1585375154]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1801488407]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1297580055]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
