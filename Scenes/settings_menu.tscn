@@ -69,6 +69,7 @@ custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.001
+value = 1.0
 
 [node name="Label" type="Label" parent="GridContainer/Audio2/hmainslider" unique_id=1772414109]
 custom_minimum_size = Vector2(120, 0)
@@ -84,6 +85,7 @@ custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.001
+value = 0.8
 
 [node name="Label" type="Label" parent="GridContainer/Audio2/hSFXslider2" unique_id=1133927764]
 custom_minimum_size = Vector2(120, 0)
@@ -99,6 +101,7 @@ custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.001
+value = 0.5
 
 [node name="Label" type="Label" parent="GridContainer/Audio2/hmusicslider3" unique_id=2049573285]
 custom_minimum_size = Vector2(120, 0)
@@ -112,18 +115,15 @@ horizontal_alignment = 1
 [node name="Visuals2" type="VBoxContainer" parent="GridContainer" unique_id=2127156628]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 0
 
-[node name="Button" type="Button" parent="GridContainer/Visuals2" unique_id=946162154]
+[node name="VHSeffect" type="CheckButton" parent="GridContainer/Visuals2" unique_id=1754981973]
 layout_mode = 2
-
-[node name="Button2" type="Button" parent="GridContainer/Visuals2" unique_id=566274428]
-layout_mode = 2
-
-[node name="Button3" type="Button" parent="GridContainer/Visuals2" unique_id=611250091]
-layout_mode = 2
+button_pressed = true
+text = "VHS effect"
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="GridContainer/Audio2/hmainslider" to="." method="_on_hmainslider_value_changed"]
 [connection signal="value_changed" from="GridContainer/Audio2/hSFXslider2" to="." method="_on_h_sf_xslider_2_value_changed"]
 [connection signal="value_changed" from="GridContainer/Audio2/hmusicslider3" to="." method="_on_hmusicslider_3_value_changed"]
+[connection signal="toggled" from="GridContainer/Visuals2/VHSeffect" to="." method="_on_vh_seffect_toggled"]
