@@ -1,13 +1,12 @@
 extends VBoxContainer
-@onready var origin_menu: CenterContainer = %Pause_menu
-@onready var clicksound: AudioStreamPlayer = $"../../Audio/Clicksound"
-@onready var vhs_shader_effect: ColorRect = $"../../VHS_shader_effect"
+@onready var clicksound: AudioStreamPlayer = $"../Audio/Clicksound"
+@onready var vhs_shader_effect: ColorRect = $"../VHS_shader_effect"
 @onready var vh_seffect: CheckButton = $GridContainer/Visuals2/VHSeffect
 
 
 func _on_back_pressed() -> void:
-	%SettingsMenu.visible = false
-	origin_menu.visible = true
+	$".".visible = false
+	Global.updatemenu.emit(Global.menus.PAUSE)
 	clicksound.play()
 
 func _on_hmainslider_value_changed(value: float) -> void:

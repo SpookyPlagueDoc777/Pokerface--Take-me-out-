@@ -1,12 +1,12 @@
 extends Control
 
-@onready var resume: Button = $CenterContainer/Panel/VBoxContainer/resume
-@onready var settings: Button = $CenterContainer/Panel/VBoxContainer/settings
-@onready var quit: Button = $CenterContainer/Panel/VBoxContainer/quit
+@onready var resume: Button = $Pause_menu/Panel/VBoxContainer/resume
+@onready var settings: Button = $Pause_menu/Panel/VBoxContainer/settings
+@onready var quit: Button = $Pause_menu/Panel/VBoxContainer/quit
 @onready var clicksound: AudioStreamPlayer = $"../Audio/Clicksound"
 
 func _ready() -> void:
-	%SettingsMenu.visible = false
+	pass
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false
@@ -14,8 +14,7 @@ func _on_resume_pressed() -> void:
 	clicksound.play()
 
 func _on_settings_pressed() -> void:
-	%Pause_menu.visible = false
-	%SettingsMenu.visible = true
+	Global.updatemenu.emit(Global.menus.SETTINGS)
 	clicksound.play()
 	
 func _on_quit_pressed() -> void:

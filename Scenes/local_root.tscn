@@ -6,6 +6,7 @@
 [ext_resource type="Shader" uid="uid://cn562c415lwx4" path="res://Visuals/Shaders/local_root.gdshader" id="2_liwd1"]
 [ext_resource type="PackedScene" uid="uid://cvykpba3r6c5v" path="res://Scenes/menu.tscn" id="3_fkxgj"]
 [ext_resource type="AudioStream" uid="uid://qllsn4icmruv" path="res://Audio/click.wav" id="4_uxewi"]
+[ext_resource type="PackedScene" uid="uid://ou0rl3rmadcb" path="res://Scenes/settings_menu.tscn" id="5_507b6"]
 [ext_resource type="AudioStream" uid="uid://col5j4wll0wq6" path="res://Audio/Sea Waves - Sound Effect.mp3" id="5_liwd1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_507b6"]
@@ -22,7 +23,6 @@ script = ExtResource("1_g0bxf")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=508086227]
 
 [node name="VHS_shader_effect" type="ColorRect" parent="CanvasLayer" unique_id=1733829156]
-unique_name_in_owner = true
 material = SubResource("ShaderMaterial_507b6")
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,12 +31,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Pause_menu" parent="CanvasLayer" unique_id=477685508 instance=ExtResource("1_7ryyd")]
+visible = false
 offset_left = 25.0
 offset_top = 23.0
 offset_right = -25.0
 offset_bottom = -25.0
 
 [node name="Menu" parent="CanvasLayer" unique_id=1559373921 instance=ExtResource("3_fkxgj")]
+visible = false
+
+[node name="SettingsMenu" parent="CanvasLayer" unique_id=198048632 instance=ExtResource("5_507b6")]
 visible = false
 
 [node name="Audio" type="Node" parent="CanvasLayer" unique_id=503782867]

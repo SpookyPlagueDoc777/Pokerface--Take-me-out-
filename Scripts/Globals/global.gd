@@ -1,8 +1,14 @@
 extends Node
 
+signal updatemenu(currentmenu)
+
 var fullscreen: bool = false
 var maximised: bool = false
 # Called when the node enters the scene tree for the first time.
+enum menus{NONE = 0,
+			MAIN = 1,
+			PAUSE = 2,
+			SETTINGS = 3}
 func _ready() -> void:
 	pass # Replace with function body.
 
