@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://ou0rl3rmadcb"]
+
+[ext_resource type="Script" uid="uid://bo4la4nvcc6x0" path="res://Scripts/Menu/settings_menu.gd" id="1_icv2g"]
+
+[node name="SettingsMenu" type="VBoxContainer" unique_id=198048632]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.5
+offset_top = -104.5
+offset_right = 324.5
+offset_bottom = 104.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+script = ExtResource("1_icv2g")
+
+[node name="Back" type="Button" parent="." unique_id=205722790]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=70456279]
+layout_mode = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="Gameplay" type="Label" parent="GridContainer" unique_id=577162848]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Gameplay"
+horizontal_alignment = 1
+
+[node name="Audio" type="Label" parent="GridContainer" unique_id=989984811]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Audio"
+horizontal_alignment = 1
+
+[node name="Visuals" type="Label" parent="GridContainer" unique_id=429197906]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Visuals"
+horizontal_alignment = 1
+
+[node name="Gameplay2" type="VBoxContainer" parent="GridContainer" unique_id=1808239561]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+
+[node name="Keybinds" type="Button" parent="GridContainer/Gameplay2" unique_id=1605357519]
+layout_mode = 2
+text = "Key bindings"
+
+[node name="Audio2" type="VBoxContainer" parent="GridContainer" unique_id=79335747]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 20
+
+[node name="hmainslider" type="HSlider" parent="GridContainer/Audio2" unique_id=743668334]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+
+[node name="Label" type="Label" parent="GridContainer/Audio2/hmainslider" unique_id=1772414109]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+offset_top = -16.0
+offset_right = 120.0
+offset_bottom = 7.0
+text = "Main volume"
+horizontal_alignment = 1
+
+[node name="hSFXslider2" type="HSlider" parent="GridContainer/Audio2" unique_id=65842936]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+
+[node name="Label" type="Label" parent="GridContainer/Audio2/hSFXslider2" unique_id=1133927764]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+offset_top = -16.0
+offset_right = 120.0
+offset_bottom = 7.0
+text = "SFX volume"
+horizontal_alignment = 1
+
+[node name="hmusicslider3" type="HSlider" parent="GridContainer/Audio2" unique_id=1424387504]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+
+[node name="Label" type="Label" parent="GridContainer/Audio2/hmusicslider3" unique_id=2049573285]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+offset_top = -16.0
+offset_right = 120.0
+offset_bottom = 7.0
+text = "Music volume"
+horizontal_alignment = 1
+
+[node name="Visuals2" type="VBoxContainer" parent="GridContainer" unique_id=2127156628]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="GridContainer/Visuals2" unique_id=946162154]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="GridContainer/Visuals2" unique_id=566274428]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="GridContainer/Visuals2" unique_id=611250091]
+layout_mode = 2
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="GridContainer/Audio2/hmainslider" to="." method="_on_hmainslider_value_changed"]
+[connection signal="value_changed" from="GridContainer/Audio2/hSFXslider2" to="." method="_on_h_sf_xslider_2_value_changed"]
+[connection signal="value_changed" from="GridContainer/Audio2/hmusicslider3" to="." method="_on_hmusicslider_3_value_changed"]

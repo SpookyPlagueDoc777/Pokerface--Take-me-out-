@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://d06025mhnfu5m" path="res://Scripts/Menu/local_root_script.gd" id="1_g0bxf"]
 [ext_resource type="PackedScene" uid="uid://vmsrfsaibwuk" path="res://Scenes/main.tscn" id="2_g0bxf"]
 [ext_resource type="PackedScene" uid="uid://cvykpba3r6c5v" path="res://Scenes/menu.tscn" id="3_fkxgj"]
+[ext_resource type="AudioStream" uid="uid://qllsn4icmruv" path="res://Audio/click.wav" id="4_uxewi"]
+[ext_resource type="AudioStream" uid="uid://col5j4wll0wq6" path="res://Audio/Sea Waves - Sound Effect.mp3" id="5_liwd1"]
 
 [node name="LocalRoot" type="Node" unique_id=1131386434]
 process_mode = 3
@@ -19,6 +21,18 @@ offset_bottom = -25.0
 
 [node name="Menu" parent="CanvasLayer" unique_id=1559373921 instance=ExtResource("3_fkxgj")]
 visible = false
+
+[node name="Audio" type="Node" parent="CanvasLayer" unique_id=503782867]
+
+[node name="Clicksound" type="AudioStreamPlayer" parent="CanvasLayer/Audio" unique_id=1004062201]
+stream = ExtResource("4_uxewi")
+bus = &"SFX"
+
+[node name="Music" type="AudioStreamPlayer" parent="CanvasLayer/Audio" unique_id=2036724740]
+stream = ExtResource("5_liwd1")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [node name="Main" parent="." unique_id=1728299770 instance=ExtResource("2_g0bxf")]
 process_mode = 1

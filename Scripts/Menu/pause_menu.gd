@@ -1,17 +1,23 @@
 extends Control
 
-@onready var resume: Button = $Panel/VBoxContainer/resume
-@onready var settings: Button = $Panel/VBoxContainer/settings
-@onready var quit: Button = $Panel/VBoxContainer/quit
+@onready var resume: Button = $CenterContainer/Panel/VBoxContainer/resume
+@onready var settings: Button = $CenterContainer/Panel/VBoxContainer/settings
+@onready var quit: Button = $CenterContainer/Panel/VBoxContainer/quit
+@onready var clicksound: AudioStreamPlayer = $"../Audio/Clicksound"
 
-
+func _ready() -> void:
+	%SettingsMenu.visible = false
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false
 	visible = false
+	clicksound.play()
 
 func _on_settings_pressed() -> void:
-	pass # Replace with function body.
-
+	%Pause_menu.visible = false
+	%SettingsMenu.visible = true
+	clicksound.play()
+	
 func _on_quit_pressed() -> void:
+	clicksound.play()
 	get_tree().quit()
