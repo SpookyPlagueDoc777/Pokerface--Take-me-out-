@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c3ktjp4flosu5"]
+
+[ext_resource type="Script" uid="uid://cobkfh7huajvl" path="res://Scripts/Menu/CustomClass/keybind_remap_script.gd" id="1_uwx6x"]
+
+[node name="KeybindRemapButton" type="Button" unique_id=1712238933]
+offset_right = 8.0
+offset_bottom = 8.0
+toggle_mode = true
+script = ExtResource("1_uwx6x")

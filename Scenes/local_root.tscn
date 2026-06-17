@@ -6,7 +6,7 @@
 [ext_resource type="Shader" uid="uid://cn562c415lwx4" path="res://Visuals/Shaders/local_root.gdshader" id="2_liwd1"]
 [ext_resource type="PackedScene" uid="uid://cvykpba3r6c5v" path="res://Scenes/menu.tscn" id="3_fkxgj"]
 [ext_resource type="AudioStream" uid="uid://qllsn4icmruv" path="res://Audio/click.wav" id="4_uxewi"]
-[ext_resource type="PackedScene" uid="uid://ou0rl3rmadcb" path="res://Scenes/settings_menu.tscn" id="5_507b6"]
+[ext_resource type="PackedScene" uid="uid://bgsgsmwi7fk7e" path="res://Scenes/settings_menu_new.tscn" id="5_507b6"]
 [ext_resource type="AudioStream" uid="uid://col5j4wll0wq6" path="res://Audio/Sea Waves - Sound Effect.mp3" id="5_liwd1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_507b6"]
@@ -40,7 +40,7 @@ offset_bottom = -25.0
 [node name="Menu" parent="CanvasLayer" unique_id=1559373921 instance=ExtResource("3_fkxgj")]
 visible = false
 
-[node name="SettingsMenu" parent="CanvasLayer" unique_id=198048632 instance=ExtResource("5_507b6")]
+[node name="SettingsMenu" parent="CanvasLayer" unique_id=21338912 instance=ExtResource("5_507b6")]
 visible = false
 
 [node name="Audio" type="Node" parent="CanvasLayer" unique_id=503782867]

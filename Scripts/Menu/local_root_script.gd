@@ -2,7 +2,7 @@ extends Node
 
 @onready var pause_menu: Control = $CanvasLayer/Pause_menu
 @onready var menu: Control = $CanvasLayer/Menu
-@onready var settings_menu: VBoxContainer = $CanvasLayer/SettingsMenu
+@onready var settings_menu: Control = $CanvasLayer/SettingsMenu
 @onready var main: Node2D = $Main
 
 func _ready() -> void:
